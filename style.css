@@ -1,0 +1,243 @@
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(https://st3.depositphotos.com/5590000/12784/v/450/depositphotos_127844876-stock-illustration-cartoon-vector-nature-landscape-background.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 2em;
+    color: blue;
+    user-select: none;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.5em;
+    color: blue;
+    text-decoration: none;
+    font-weight: 50%;
+    margin-left: 30px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transform-origin: right;
+    transform: scalez(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scalex(1);
+}
+
+.calculos h1 {
+    text-align: center;
+    font-size: 34px;
+    color: rgb(219, 255, 15);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80vh;
+    margin: 0;
+}
+
+#game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-equation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#equation {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(195, 236, 13);
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.character-container {
+    margin-bottom: 40px;
+}
+
+#character {
+    width: 300px;
+}
+
+#answer {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 180px;
+    margin-top: 20px;
+    border: 2px solid #1A237E;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #1A237E, #0D47A1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: red;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+#answer::placeholder {
+    color: rgb(223, 15, 188);
+}
+
+#answer:hover {
+    background-color: #1A237E;
+    color: white;
+}
+
+#answer:active {
+    transform: scale(0.95); /* Reduzir o tamanho quando clicado */
+}
+
+#hearts-container {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.heart-icon {
+    color: red;
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: rgb(21, 64, 255);
+}
+
+#score-value {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#level-emoji {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e022a1;
+}
+
+.difficulty-text {
+    font-size: 24px;
+    color: #fff022;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.difficulty-buttons {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#easy-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #4CAF50; /* Verde para fácil */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#medium-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #FFC107; /* Amarelo para médio */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#hard-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #F44336; /* Vermelho para difícil */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.difficulty-buttons button:hover {
+    background-color: #0D47A1;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.difficulty-buttons button:active {
+    transform: scale(0.95);
+}

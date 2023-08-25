@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navegacao">
+            <h2 class="logo">EduPlay Word</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">contatos</a>
+                <a href="#">serviços</a>
+                <a href="#">Sobre nós</a>
+                <a href="#">Login</a>
+            </nav>
+        </div>
+        <div class="calculos">
+            <h1>
+                Resolva os cálculos:
+            </h1>
+            <div id="score">
+                Level: <span id="level-emoji"></span> <span id="score-value">0</span>
+            </div>
+        </div>
+        <div class="difficulty-buttons">
+            <p class="difficulty-text">Escolha a sua dificuldade:</p>
+            <button id="easy-btn">Fácil</button>
+            <button id="medium-btn">Médio</button>
+            <button id="hard-btn">Difícil</button>
+        </div>
+    </header>
+    <main>
+        <div id="game-container">
+            <div class="character-equation-container">
+                <div id="equation"></div>
+                <div class="character-container">
+                    <img id="character" src="https://i.pinimg.com/originals/75/33/ef/7533efc41868dd51bfd202bd4eb83826.gif" alt="Personagem">
+                </div>
+            </div>
+            <input type="text" id="answer" placeholder="Resultado">
+        </div>
+        <div id="hearts-container"></div>
+        <div id="message"></div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
